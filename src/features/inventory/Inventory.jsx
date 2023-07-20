@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import {
   calculatePrice,
@@ -11,6 +11,7 @@ export const Inventory = ({ inventory, currencyFilter, dispatch }) => {
   const onMount = () => {
     dispatch(loadData());
   };
+
   useEffect(onMount, [dispatch]);
 
   const onClickHandler = (inventoryItem) => {
